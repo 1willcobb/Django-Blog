@@ -1,0 +1,21 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+<p>Topic you wish to delete:</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <p>{{ topic }}</p>
+    <p>Are you sure you want to delete this ENTIRE topic?</p>
+    <div>
+        <button name="submit" class="button">Uh, Yeah</button>
+        <a href="{% url 'learning_logs:topic' topic.id %}" class="button">gtfo, no way</a>
+        <button class="button">this button doesnt do anything</button>
+    </div>
+</form>
+
+
+
+
+{% endblock content %}
