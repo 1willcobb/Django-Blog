@@ -1,4 +1,4 @@
-{% load bootstrap4 %}
+{% load static %}
 
 <!doctype html>
 <html lang="eng">
@@ -8,8 +8,7 @@
   <meta charse="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Learning Log</title>
-  {% bootstrap_css %}
-  {% bootstrap_javascript jquery='full' %}
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 
 <body>
@@ -54,6 +53,7 @@
     <div>
       {% block content %}{% endblock content %}
     </div>
+    <script src="{% static 'inde.js' %}"></script>
   </main>
 </body>
 
